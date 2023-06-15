@@ -1,0 +1,2 @@
+# genapiminz
+REST API | TOKEN GENERATOR
