@@ -18,8 +18,29 @@ result = api.generateNumber(number="087xxxxxxx", name="Minz Team", password="Min
   > Use Capitals, Number, And Symbol
 '''
 if result["STATUS"] == "OK":
-  api_result = api.generateToken(id=result["id"], pincode="123456")
+  api_result = api.generateToken(id=result["message"]["id"], pincode="123456")
   api.print_result(api_result)
+```
+Python Language
+```python
+import requests, json
+
+params = {
+  "apikey": "YOUR APIKEY",
+  "number": "087xxxxxxx",
+  "name": "Minz Team",
+  "password": "Minzteam123_"
+}
+api = requests.get("https://gen.minzteam.xyz/getnumber", params=params).json()
+
+if api["STATUS"] == "OK":
+  params = {
+    "apikey": "YOUR APIKEY",
+    "id": api["message"]["id"],
+    "pincode": "123456"
+  }
+  result = requests.get("https://gen.minzteam.xyz/getpincode", params=params).json()
+  print(result)
 ```
 
 ### CONTACT US
