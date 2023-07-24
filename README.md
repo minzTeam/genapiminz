@@ -1,7 +1,7 @@
 # REST API | TOKEN GENERATOR
 
 ### APIKEY REQUIRED
-You need <a href="https://api.minzteam.xyz">apikey</a> to get the response
+You need <a href="https://gen.minzteam.xyz">apikey</a> to get the response
 
 ### EXAMPLE REQUEST
 Use genapiminz.py
