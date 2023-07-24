@@ -14,8 +14,8 @@ class GenTokenMachine(threading.Thread):
         main = self.session.get(self.base_url+path, params=params).json()
         return main
 
-    def generateNumber(self, number="", name="", password=""):
-        params = {"number": number, "name": name, "password": password , "apikey": self.headers}
+    def generateNumber(self, number="", name=""):
+        params = {"number": number, "name": name, "apikey": self.headers}
         main = self.requestGet("/getnumber", params)
         return main
       
