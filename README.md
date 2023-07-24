@@ -13,6 +13,7 @@ api = GenTokenMachine("YOUR APIKEY")
 result = api.generateNumber(number="+91xxxxxxx", name="Minz Team")
 '''Note:
 - You Must Use India Number
+- 1 Request Generate Token Balance: 2000
 '''
 if result["STATUS"] == "OK":
   api_result = api.generateToken(id=result["message"]["id"], pincode="123456")
