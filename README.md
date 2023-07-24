@@ -10,12 +10,9 @@ from genapiminz import *
 
 api = GenTokenMachine("YOUR APIKEY")
 
-result = api.generateNumber(number="087xxxxxxx", name="Minz Team", password="Minzteam123_")
+result = api.generateNumber(number="+91xxxxxxx", name="Minz Team")
 '''Note:
-- You Must Use Indonesian Number
-- Password Must Include Item Below
-  > Minimal 8 Charachter
-  > Use Capitals, Number, And Symbol
+- You Must Use India Number
 '''
 if result["STATUS"] == "OK":
   api_result = api.generateToken(id=result["message"]["id"], pincode="123456")
@@ -27,9 +24,8 @@ import requests, json
 
 params = {
   "apikey": "YOUR APIKEY",
-  "number": "087xxxxxxx",
-  "name": "Minz Team",
-  "password": "Minzteam123_"
+  "number": "+91xxxxxxx",
+  "name": "Minz Team"
 }
 api = requests.get("https://gen.minzteam.xyz/getnumber", params=params).json()
 
